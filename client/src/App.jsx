@@ -1,10 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
+import Register from "./Register/Register";
 
 const App = () => {
   return (
-    <div className='text-3xl'>App</div>
-  )
-}
+    <div>
+      <Register />
+    </div>
+  );
+};
 
-export default App
+export default App;
