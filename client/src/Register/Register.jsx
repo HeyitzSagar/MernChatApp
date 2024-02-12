@@ -3,10 +3,8 @@ import "./Register.css";
 const Register = () => {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
-  console.log(UserName);
-  console.log(Password);
   const HandleSubmit = () => {
-    const specialCharactersRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+    const specialCharactersRegex = /[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/;
     if (UserName.length < 1) {
       alert("Username cannot be null");
     } else if (Password.length < 6) {
@@ -17,14 +15,14 @@ const Register = () => {
   };
   return (
     <div className="bg h-screen flex items-center justify-center">
-      <form className="w-64 mx-auto ">
+      <form className="w-80 mx-auto  bg-white p-5 ">
         <input
-          onChange={(e) => {
+          onChange={(e) => {    
             setUserName(e.target.value);
           }}
           type="text"
           placeholder="UserName"
-          className="block w-full rounded-sm p-2 mb-2 border"
+          className="text-center bg-black text-white block w-full rounded-sm p-2 mb-2 border"
         />
         <input
           onChange={(e) => {
@@ -32,11 +30,11 @@ const Register = () => {
           }}
           type="text"
           placeholder="Password"
-          className="block w-full rounded-sm p-2 mb-2 border"
+          className="text-center bg-black text-white block w-full rounded-sm p-2 mb-2 border"
         />
         <button
           onClick={HandleSubmit}
-          className="bg-blue-500 hover:bg-blue-700 text-white block w-full rounded-sm p-2 "
+          className="text-center bg-blue-500 text-white block w-full rounded-sm p-2 "
         >
           Register
         </button>
