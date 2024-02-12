@@ -1,7 +1,18 @@
 .bg{
-    background-color: rgb(189, 189, 142);
+    background-color: rgb(97, 126, 118);
 }
 .input{
-    background-color: #8b7f7f;
-    color: rgb(59, 43, 43);
+    background-color: #cddeeb;
+    color: rgb(100, 95, 95);
+    font-weight: 500;
+    font-size: 20px;
+}
+.bg-card{
+    background-color: #83a4b5;
+}
+.text-red{
+    color: rgb(209, 69, 69);
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px
 }
