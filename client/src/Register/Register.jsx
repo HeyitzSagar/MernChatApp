@@ -22,7 +22,17 @@ const Register = () => {
         transition: Bounce,
       });
     } else if (Password.length < 6) {
-      alert("Password should be between 6 to 12 letter");
+      toast("Password Should be greater than six letter", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
     } else if (!specialCharactersRegex.test(Password)) {
       alert("Password should contains special characters");
     }
@@ -47,12 +57,16 @@ const Register = () => {
             placeholder="Password"
             className="text-center input  block w-full rounded-sm p-2 mb-2 border"
           />
-          <button
-            onClick={HandleSubmit}
-            className="text-center bg-blue-500  block w-full rounded-sm p-2 "
-          >
-            Register
-          </button>
+          {UserName && Password.length > 6 ? (
+            <button
+              onClick={HandleSubmit}
+              className="text-center bg-blue-500  block w-full rounded-sm p-2 "
+            >
+              Register
+            </button>
+          ) : (
+            " "
+          )}
         </form>
       </div>
       <ToastContainer />
